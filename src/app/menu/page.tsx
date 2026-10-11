@@ -1,6 +1,7 @@
 import React, { Suspense } from "react";
 import { getCategories, getProducts } from "@/services/menu";
 import { MenuClient } from "./MenuClient";
+import { MenuJsonLd } from "@/components/MenuJsonLd";
 
 export const metadata = {
   title: "Full Menu | Antigravity Bistro & Kitchen",
@@ -12,6 +13,7 @@ export default async function MenuPage() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <MenuJsonLd products={products} />
       <div className="mb-8 text-center sm:text-left">
         <span className="text-xs font-black text-orange-600 uppercase tracking-widest">
           Fresh From The Hearth

@@ -4,6 +4,7 @@ import { AuthProvider } from "@/context/AuthContext";
 import { CartProvider } from "@/context/CartContext";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { RestaurantJsonLd } from "@/components/RestaurantJsonLd";
 
 export const metadata: Metadata = {
   title: "Antigravity Bistro & Kitchen | Wood-Fired Gourmet Food Ordering",
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col bg-[#faf8f5] text-stone-900 selection:bg-orange-500 selection:text-white">
         <AuthProvider>
           <CartProvider>
+            <RestaurantJsonLd />
             <Navbar />
             <main className="flex-1">{children}</main>
             <Footer />
